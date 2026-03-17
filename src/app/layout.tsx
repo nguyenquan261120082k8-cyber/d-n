@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Template",
-  description: "A minimal Next.js starter template",
+  title: "AI Toolbox — Bộ công cụ AI thông minh",
+  description:
+    "AI Toolbox: Sinh code, dịch, tóm tắt và nhiều công cụ AI giúp bạn làm việc hiệu quả hơn. Free 3 lượt/ngày.",
+  keywords: ["AI", "code generator", "sinh code", "AI tools", "lập trình"],
+  openGraph: {
+    title: "AI Toolbox",
+    description: "Bộ công cụ AI giúp bạn làm việc thông minh hơn",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="vi" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0a0a0f] text-white`}
       >
         {children}
       </body>
